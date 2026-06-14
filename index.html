@@ -127,7 +127,6 @@
             color: var(--accent);
             border-color: var(--accent);
         }
-        /* new styles for generate id and display name */
         .gen-id-btn {
             background: var(--accent-dim2);
             border: 0.5px solid var(--border2);
@@ -609,7 +608,6 @@
             padding: 0;
         }
         .msg-input::placeholder { color: var(--text3); }
-        /* FIX: Ensure message input field is always visible with correct background and text color */
         .input-wrap .msg-input {
             background: var(--bg3);
             color: var(--text);
@@ -694,183 +692,166 @@
             width: 100%;
         }
 
-        /* ---------- ADDED MOBILE RESPONSIVE DESIGN (no existing styles removed) ---------- */
+        /* ---------- MOBILE RESPONSIVE (unchanged) ---------- */
         @media (max-width: 768px) {
-            body {
-                overflow-y: auto;
-                height: auto;
-            }
-            #entry {
-                height: auto;
-                min-height: 100vh;
-                padding: 20px 16px;
-                justify-content: center;
-            }
-            .entry-card {
-                width: 100%;
-                max-width: 380px;
-                padding: 28px 20px;
-                margin: 0 auto;
-            }
-            .entry-my-id .id-row {
-                flex-wrap: wrap;
-                gap: 6px;
-            }
-            .id-value {
-                font-size: 18px;
-                word-break: break-all;
-            }
-            .connect-input, .connect-btn, .history-btn {
-                font-size: 14px;
-                padding: 12px;
-            }
-            #app {
-                flex-direction: column;
-                height: auto;
-                min-height: 100vh;
-            }
-            #sidebar {
-                width: 100%;
-                min-width: unset;
-                height: auto;
-                max-height: 45vh;
-                border-right: none;
-                border-bottom: 0.5px solid var(--border);
-            }
-            .convos-list {
-                max-height: calc(45vh - 120px);
-                overflow-y: auto;
-            }
-            #main {
-                height: 55vh;
-                min-height: 300px;
-            }
-            .chat-header {
-                padding: 12px 16px;
-            }
-            .chat-header-id {
-                font-size: 13px;
-            }
-            .messages {
-                padding: 16px;
-            }
-            .msg-bubble {
-                font-size: 13px;
-                padding: 8px 12px;
-            }
-            .input-area {
-                padding: 10px 16px;
-            }
-            .input-wrap {
-                padding: 8px 12px;
-            }
-            .msg-input {
-                font-size: 14px;
-            }
-            .send-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 14px;
-            }
-            .convo-item {
-                padding: 8px;
-            }
-            .convo-avatar {
-                width: 32px;
-                height: 32px;
-                font-size: 10px;
-            }
-            .convo-id {
-                font-size: 11px;
-            }
-            .convo-preview {
-                font-size: 10px;
-            }
-            .sidebar-header {
-                padding: 16px;
-            }
-            .sidebar-my-id .mid {
-                font-size: 12px;
-            }
-            .sidebar-new-btn {
-                font-size: 10px;
-                padding: 6px 10px;
-            }
-            .sidebar-display-name span {
-                font-size: 10px;
-            }
-            .status-dot-row {
-                margin-top: 16px;
-            }
-            .toast {
-                bottom: 16px;
-                padding: 8px 16px;
-                font-size: 11px;
-            }
-            .display-name-input {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-            .copy-btn, .gen-id-btn {
-                padding: 4px 8px;
-                font-size: 9px;
-            }
-            .entry-logo {
-                font-size: 9px;
-                margin-bottom: 20px;
-                text-align: center;
-                letter-spacing: 0.2em;
-            }
+            body { overflow-y: auto; height: auto; }
+            #entry { height: auto; min-height: 100vh; padding: 20px 16px; justify-content: center; }
+            .entry-card { width: 100%; max-width: 380px; padding: 28px 20px; margin: 0 auto; }
+            .entry-my-id .id-row { flex-wrap: wrap; gap: 6px; }
+            .id-value { font-size: 18px; word-break: break-all; }
+            .connect-input, .connect-btn, .history-btn { font-size: 14px; padding: 12px; }
+            #app { flex-direction: column; height: auto; min-height: 100vh; }
+            #sidebar { width: 100%; min-width: unset; height: auto; max-height: 45vh; border-right: none; border-bottom: 0.5px solid var(--border); }
+            .convos-list { max-height: calc(45vh - 120px); overflow-y: auto; }
+            #main { height: 55vh; min-height: 300px; }
+            .chat-header { padding: 12px 16px; }
+            .chat-header-id { font-size: 13px; }
+            .messages { padding: 16px; }
+            .msg-bubble { font-size: 13px; padding: 8px 12px; }
+            .input-area { padding: 10px 16px; }
+            .input-wrap { padding: 8px 12px; }
+            .msg-input { font-size: 14px; }
+            .send-btn { width: 36px; height: 36px; font-size: 14px; }
+            .convo-item { padding: 8px; }
+            .convo-avatar { width: 32px; height: 32px; font-size: 10px; }
+            .convo-id { font-size: 11px; }
+            .convo-preview { font-size: 10px; }
+            .sidebar-header { padding: 16px; }
+            .sidebar-my-id .mid { font-size: 12px; }
+            .sidebar-new-btn { font-size: 10px; padding: 6px 10px; }
+            .sidebar-display-name span { font-size: 10px; }
+            .status-dot-row { margin-top: 16px; }
+            .toast { bottom: 16px; padding: 8px 16px; font-size: 11px; }
+            .display-name-input { font-size: 12px; padding: 6px 10px; }
+            .copy-btn, .gen-id-btn { padding: 4px 8px; font-size: 9px; }
+            .entry-logo { font-size: 9px; margin-bottom: 20px; text-align: center; letter-spacing: 0.2em; }
+        }
+        @media (max-width: 480px) {
+            .entry-card { padding: 20px 16px; }
+            .entry-my-id { padding: 12px 16px; }
+            .id-value { font-size: 16px; }
+            .connect-input { font-size: 14px; padding: 10px 12px; }
+            .connect-btn, .history-btn { font-size: 13px; padding: 10px; }
+            .chat-header-id { font-size: 12px; }
+            .chat-header-status { font-size: 9px; }
+            .messages { padding: 12px; }
+            .msg-bubble { font-size: 12px; padding: 6px 10px; }
+            .input-area { gap: 6px; }
+            .send-btn { width: 32px; height: 32px; }
+            .sidebar-header { padding: 12px; }
+            .convos-list { padding: 4px; }
+            .convo-item { gap: 8px; }
         }
 
-        @media (max-width: 480px) {
-            .entry-card {
-                padding: 20px 16px;
-            }
-            .entry-my-id {
-                padding: 12px 16px;
-            }
-            .id-value {
-                font-size: 16px;
-            }
-            .connect-input {
-                font-size: 14px;
-                padding: 10px 12px;
-            }
-            .connect-btn, .history-btn {
-                font-size: 13px;
-                padding: 10px;
-            }
-            .chat-header-id {
-                font-size: 12px;
-            }
-            .chat-header-status {
-                font-size: 9px;
-            }
-            .messages {
-                padding: 12px;
-            }
-            .msg-bubble {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-            .input-area {
-                gap: 6px;
-            }
-            .send-btn {
-                width: 32px;
-                height: 32px;
-            }
-            .sidebar-header {
-                padding: 12px;
-            }
-            .convos-list {
-                padding: 4px;
-            }
-            .convo-item {
-                gap: 8px;
-            }
+        /* ---------- GROUP CHAT ADDITIONS ---------- */
+        .group-section {
+            border-top: 0.5px solid var(--border);
+            padding: 4px 8px 8px;
+            max-height: 40%;
+            overflow-y: auto;
         }
+        .group-section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 4px 4px;
+            font-size: 10px;
+            font-family: var(--mono);
+            color: var(--text3);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .group-create-btn, .group-join-btn {
+            background: transparent;
+            border: 0.5px dashed var(--border2);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-family: var(--mono);
+            font-size: 9px;
+            color: var(--text3);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .group-create-btn:hover, .group-join-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-dim2);
+        }
+        .group-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.12s;
+            border: 0.5px solid transparent;
+        }
+        .group-item:hover { background: var(--bg3); }
+        .group-item.active { background: var(--accent-dim); border-color: rgba(124,111,255,0.25); }
+        .group-avatar {
+            width: 34px; height: 34px; border-radius: 10px;
+            background: var(--bg4); border: 0.5px solid var(--border2);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--mono); font-size: 10px; color: var(--text2);
+            flex-shrink: 0;
+        }
+        .group-info { flex: 1; min-width: 0; }
+        .group-name {
+            font-family: var(--mono); font-size: 12px; font-weight: 500;
+            color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .group-preview {
+            font-size: 10px; color: var(--text3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+
+        /* ---------- MEMBERS LIST PANEL ---------- */
+        .members-panel {
+            position: absolute;
+            top: 56px; right: 10px;
+            background: var(--bg3);
+            border: 0.5px solid var(--border2);
+            border-radius: 12px;
+            padding: 12px;
+            min-width: 180px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 20;
+            display: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .members-panel.show { display: block; }
+        .member-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            font-size: 12px;
+            color: var(--text2);
+            border-bottom: 0.5px solid var(--border);
+        }
+        .member-item:last-child { border-bottom: none; }
+        .host-badge {
+            background: var(--accent);
+            color: white;
+            font-size: 8px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            margin-left: auto;
+            font-family: var(--mono);
+        }
+        .members-btn {
+            background: var(--bg3);
+            border: 0.5px solid var(--border);
+            border-radius: 8px;
+            width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            color: var(--text2);
+            font-size: 16px;
+            transition: all 0.12s;
+        }
+        .members-btn:hover { border-color: var(--border2); color: var(--text); }
     </style>
 </head>
 <body>
@@ -886,7 +867,6 @@
                 <button class="gen-id-btn" onclick="generateNewId()">GENERATE NEW ID</button>
             </div>
         </div>
-        <!-- Display name UI -->
         <div class="display-name-row">
             <div class="display-name-label">display name (optional)</div>
             <input type="text" id="display-name-input" class="display-name-input" placeholder="e.g. Alice, Bob..." maxlength="24">
@@ -903,8 +883,6 @@
     </div>
 </div>
 
-
-
 <div id="app">
     <div id="sidebar">
         <div class="sidebar-header">
@@ -914,7 +892,6 @@
                 <span class="mid" id="sidebar-my-id">—</span>
                 <button class="copy-btn" style="padding:4px 8px;font-size:9px;" onclick="copyMyId()">COPY</button>
             </div>
-            <!-- Display name in sidebar -->
             <div class="sidebar-display-name" id="sidebar-display-name-container">
                 <span id="sidebar-display-name-span">—</span>
                 <button class="edit-name-icon" onclick="editDisplayNameFromSidebar()">✎</button>
@@ -922,6 +899,16 @@
             <button class="sidebar-new-btn" onclick="openNewConnectionPrompt()">+ request connection</button>
         </div>
         <div class="convos-list" id="convos-list"></div>
+        <div class="group-section" id="groups-section">
+            <div class="group-section-header">
+                <span>GROUP CHATS</span>
+                <div style="display:flex; gap:4px;">
+                    <button class="group-create-btn" onclick="createGroupChat()">+ Create</button>
+                    <button class="group-join-btn" onclick="joinGroupChatPrompt()">Join</button>
+                </div>
+            </div>
+            <div id="groups-list"></div>
+        </div>
     </div>
     <div id="main">
         <div id="empty-main">
@@ -929,17 +916,19 @@
             <div>no active chat</div>
             <div style="margin-top:4px;color:var(--text3)">request a handshake or accept pending invitations</div>
         </div>
-        <div id="chat-panel" style="display:none;flex-direction:column;height:100%;overflow:hidden;">
+        <div id="chat-panel" style="display:none;flex-direction:column;height:100%;overflow:hidden;position:relative;">
             <div class="chat-header">
                 <div class="chat-header-avatar" id="header-avatar"></div>
                 <div class="chat-header-info">
                     <div class="chat-header-id" id="header-id">—</div>
                     <div class="chat-header-status" id="header-status"></div>
                 </div>
-                <div class="chat-header-actions">
+                <div class="chat-header-actions" style="display:flex; gap:8px;">
+                    <button class="members-btn" id="group-members-btn" onclick="toggleGroupMembers()" style="display:none;" title="Group members">👥</button>
                     <button class="icon-btn" onclick="goBack()">⌫</button>
                 </div>
             </div>
+            <div class="members-panel" id="members-panel"></div>
             <div class="messages" id="messages"></div>
             <div class="input-area">
                 <div class="input-wrap">
@@ -955,18 +944,19 @@
 <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.2/dist/peerjs.min.js"></script>
 <script>
     // ══════════════════════════════════════
-    // MUTUAL HANDSHAKE CHAT — REAL PEER-TO-PEER VIA WEBRTC (PEERJS)
-    // PERSISTENT CONVERSATIONS + AUTO-RECONNECTION FOR PREVIOUS CONTACTS
-    // ══════════════════════════════════════════
+    // FULL IMPLEMENTATION – WITH REAL NAMES IN GROUP BUBBLES
+    // ══════════════════════════════════════
 
     let myId = null;
     let peer = null;
     let activeConvoId = null;
+    let activeGroupId = null;
     let sessions = {};
+    let groups = {};
     let peerReady = false;
-    let reconnectingFlags = {};  // avoid duplicate reconnection attempts
+    let reconnectingFlags = {};
 
-    // ── LocalStorage persistence helpers ──
+    // ── LocalStorage persistence ──
     function saveSessionsToStorage() {
         const data = {};
         Object.keys(sessions).forEach(pid => {
@@ -975,6 +965,7 @@
             data[pid] = rest;
         });
         localStorage.setItem('nullLink_sessions', JSON.stringify(data));
+        localStorage.setItem('nullLink_groups', JSON.stringify(groups));
     }
 
     function loadSessionsFromStorage() {
@@ -984,28 +975,31 @@
             const data = JSON.parse(raw);
             Object.keys(data).forEach(pid => {
                 sessions[pid] = data[pid];
-                // Reset connection-related fields, but preserve 'established' flag and messages
                 sessions[pid].online = false;
                 sessions[pid].active = false;
                 sessions[pid].conn = null;
-                // ensure 'established' exists (if missing, derive from active or handshake)
                 if (sessions[pid].established === undefined) {
                     sessions[pid].established = sessions[pid].active === true || (sessions[pid].messages && sessions[pid].messages.length > 0);
                 }
             });
-        } catch (e) {
-            console.warn('Failed to load sessions from storage', e);
+        } catch (e) { console.warn('Failed to load sessions', e); }
+
+        const groupRaw = localStorage.getItem('nullLink_groups');
+        if (groupRaw) {
+            try { groups = JSON.parse(groupRaw); } catch(e){ console.warn('Failed to load groups', e); }
         }
+        if (!groups) groups = {};
+        Object.values(groups).forEach(g => {
+            if (!g.memberNames) g.memberNames = {};
+        });
     }
 
-    // ── Generate short peer ID ──
     function generateShortId() {
         const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
         let id = '';
         for (let i = 0; i < 8; i++) id += chars[Math.floor(Math.random() * chars.length)];
         return id;
     }
-
     function getOrCreatePeerId() {
         const stored = localStorage.getItem('nullLink_myPeerId');
         if (stored) return stored;
@@ -1014,32 +1008,26 @@
         return fresh;
     }
 
-    // NEW: generate brand new ID, reset everything
     function generateNewId() {
         if (!confirm("Generate a new ID? This will reset all conversations and you'll need to reconnect with your contacts. Your chat history for the current ID will be lost.")) return;
-        // destroy current peer connection
-        if (peer && !peer.destroyed) {
-            peer.destroy();
-        }
-        // clear stored ID and sessions
+        if (peer && !peer.destroyed) peer.destroy();
         localStorage.removeItem('nullLink_myPeerId');
         localStorage.removeItem('nullLink_sessions');
+        localStorage.removeItem('nullLink_groups');
         sessions = {};
-        // clear local sessions object
-        // reinitialize peer with new ID
-        initPeer(true); // force fresh init
+        groups = {};
+        initPeer(true);
         toast("New ID generated! Share this new ID with your contacts.");
-        // optionally refresh UI to show empty conversations
         renderSidebar();
+        renderGroupsList();
         if (activeConvoId) goBack();
+        if (activeGroupId) { activeGroupId = null; goBack(); }
     }
 
-    // ── Display name management ──
     let currentDisplayName = "";
     function loadDisplayName() {
         const stored = localStorage.getItem('nullLink_displayName');
-        if (stored) currentDisplayName = stored;
-        else currentDisplayName = "";
+        currentDisplayName = stored || "";
         updateDisplayNameUI();
     }
     function saveDisplayName() {
@@ -1055,10 +1043,6 @@
         if (entryInput) entryInput.value = currentDisplayName;
         const sidebarSpan = document.getElementById('sidebar-display-name-span');
         if (sidebarSpan) sidebarSpan.textContent = currentDisplayName && currentDisplayName.length > 0 ? currentDisplayName : "—";
-        const container = document.getElementById('sidebar-display-name-container');
-        if (container && (!currentDisplayName || currentDisplayName.length === 0)) {
-            // optional subtle style
-        }
     }
     function editDisplayNameFromSidebar() {
         const newName = prompt("Enter your display name (max 24 characters):", currentDisplayName);
@@ -1070,7 +1054,6 @@
         }
     }
 
-    // ── Initialize PeerJS (modified to allow forced restart) ──
     function initPeer(forceFresh = false) {
         if (forceFresh) {
             if (peer && !peer.destroyed) peer.destroy();
@@ -1079,16 +1062,7 @@
         const shortId = getOrCreatePeerId();
         document.getElementById('my-id-display').textContent = shortId;
         document.getElementById('sidebar-my-id').textContent = shortId;
-
-        try {
-            peer = new Peer(shortId, { debug: 0 });
-        } catch (e) {
-            console.error('PeerJS init error:', e);
-            document.getElementById('my-id-display').textContent = 'error — refresh';
-            document.getElementById('relay-status-text').textContent = 'relay unavailable — please refresh';
-            return;
-        }
-
+        try { peer = new Peer(shortId, { debug: 0 }); } catch (e) { document.getElementById('my-id-display').textContent = 'error — refresh'; return; }
         peer.on('open', function(id) {
             myId = id;
             peerReady = true;
@@ -1100,26 +1074,15 @@
             toast('Your session ID is ready — share it with your partner');
             saveSessionsToStorage();
         });
-
-        peer.on('connection', function(conn) {
-            handleIncomingConnection(conn);
-        });
-
+        peer.on('connection', function(conn) { handleIncomingConnection(conn); });
         peer.on('error', function(err) {
-            console.error('PeerJS error:', err);
-            if (err.type === 'unavailable-id') {
-                localStorage.removeItem('nullLink_myPeerId');
-                peer.destroy();
-                setTimeout(() => initPeer(true), 300);
-                return;
-            }
-            if (err.type === 'peer-unavailable') toast('Peer is unreachable. They may be offline or ID incorrect.');
+            if (err.type === 'unavailable-id') { localStorage.removeItem('nullLink_myPeerId'); peer.destroy(); setTimeout(() => initPeer(true), 300); return; }
+            if (err.type === 'peer-unavailable') toast('Peer is unreachable.');
             if (err.type === 'network' || err.type === 'server-error') {
                 document.getElementById('relay-dot').style.background = 'var(--red)';
                 document.getElementById('relay-status-text').textContent = 'relay disrupted — reconnecting…';
             }
         });
-
         peer.on('disconnected', function() {
             document.getElementById('relay-dot').style.background = 'var(--amber)';
             document.getElementById('relay-status-text').textContent = 'relay reconnecting…';
@@ -1127,13 +1090,11 @@
         });
     }
 
-    // ── Incoming connection handling (enhanced for auto-reactivate) ──
     function handleIncomingConnection(conn) {
         const remotePeerId = conn.peer;
         ensureSession(remotePeerId);
         sessions[remotePeerId].conn = conn;
         sessions[remotePeerId].online = true;
-
         conn.on('data', function(data) { handleDataMessage(remotePeerId, data); });
         conn.on('close', function() {
             if (sessions[remotePeerId]) {
@@ -1143,102 +1104,316 @@
             }
             saveSessionsToStorage();
             renderSidebar();
+            renderGroupsList();
             if (activeConvoId === remotePeerId) updateHeaderStatus();
             toast('Connection with ' + remotePeerId + ' closed.');
         });
         conn.on('error', function(err) { console.error('Connection error with', remotePeerId, ':', err); });
     }
 
-    // ── Core message handling: supports RECONNECT for previously established contacts ──
     function handleDataMessage(peerId, rawData) {
         let data;
         try { data = JSON.parse(rawData); } catch (e) { data = { type: 'CHAT', text: String(rawData), time: getTime(), from: peerId }; }
-
         ensureSession(peerId);
         const sess = sessions[peerId];
 
-        // ---- RECONNECT protocol (persistent conversations after browser restart) ----
         if (data.type === 'HANDSHAKE_RECONNECT') {
             if (sess.established || (sess.messages && sess.messages.length > 0)) {
-                sess.active = true;
-                sess.pendingHandshake = 'none';
-                sess.online = true;
-                if (sess.conn && sess.conn.open) {
-                    sess.conn.send(JSON.stringify({ type: 'HANDSHAKE_RECONNECT_ACCEPT', from: myId }));
-                }
-                saveSessionsToStorage();
-                toast(`Reconnected with ${peerId} — you can now chat`);
-                renderSidebar();
+                sess.active = true; sess.pendingHandshake = 'none'; sess.online = true;
+                if (sess.conn && sess.conn.open) sess.conn.send(JSON.stringify({ type: 'HANDSHAKE_RECONNECT_ACCEPT', from: myId }));
+                saveSessionsToStorage(); renderSidebar();
                 if (activeConvoId === peerId) { renderMessages(); updateHeaderStatus(); }
             } else {
-                // fallback: treat as normal handshake request
-                sess.pendingHandshake = 'incoming';
-                saveSessionsToStorage();
-                renderSidebar();
+                sess.pendingHandshake = 'incoming'; saveSessionsToStorage(); renderSidebar();
                 toast(`Incoming handshake from ${peerId} — accept to chat`);
             }
             return;
         }
         if (data.type === 'HANDSHAKE_RECONNECT_ACCEPT') {
-            sess.active = true;
-            sess.pendingHandshake = 'none';
-            sess.online = true;
-            sess.established = true;
-            saveSessionsToStorage();
-            toast(`Connection restored with ${peerId}`);
-            renderSidebar();
+            sess.active = true; sess.pendingHandshake = 'none'; sess.online = true; sess.established = true;
+            saveSessionsToStorage(); renderSidebar();
             if (activeConvoId === peerId) { renderMessages(); updateHeaderStatus(); }
             return;
         }
 
-        // Standard handshake flow
         if (data.type === 'HANDSHAKE_REQUEST') {
             const requesterId = data.from || peerId;
             if (sessions[requesterId] && sessions[requesterId].established) {
-                // Auto-accept if previously established
-                if (sessions[requesterId].conn && sessions[requesterId].conn.open) {
+                if (sessions[requesterId].conn && sessions[requesterId].conn.open)
                     sessions[requesterId].conn.send(JSON.stringify({ type: 'HANDSHAKE_ACCEPT', from: myId }));
-                }
-                sessions[requesterId].active = true;
-                sessions[requesterId].pendingHandshake = 'none';
-                saveSessionsToStorage();
-                renderSidebar();
-                if (activeConvoId === requesterId) updateHeaderStatus();
+                sessions[requesterId].active = true; sessions[requesterId].pendingHandshake = 'none';
+                saveSessionsToStorage(); renderSidebar(); if (activeConvoId === requesterId) updateHeaderStatus();
                 return;
             }
             const sessReq = ensureSession(requesterId);
-            sessReq.pendingHandshake = 'incoming';
-            sessReq.online = true;
+            sessReq.pendingHandshake = 'incoming'; sessReq.online = true;
             toast('Incoming handshake request from ' + requesterId + ' — accept to start chatting');
-            saveSessionsToStorage();
-            renderSidebar();
-            showAppIfNeeded();
-        } 
+            saveSessionsToStorage(); renderSidebar(); showAppIfNeeded();
+        }
         else if (data.type === 'HANDSHAKE_ACCEPT') {
             const accepterId = data.from || peerId;
             const s = ensureSession(accepterId);
-            s.active = true;
-            s.pendingHandshake = 'none';
-            s.established = true;
-            s.online = true;
+            s.active = true; s.pendingHandshake = 'none'; s.established = true; s.online = true;
             toast('Connection established with ' + accepterId + ' — you can now chat');
-            saveSessionsToStorage();
-            renderSidebar();
-            showAppIfNeeded();
-            openConvo(accepterId);
-        } 
+            saveSessionsToStorage(); renderSidebar(); showAppIfNeeded(); openConvo(accepterId);
+        }
         else if (data.type === 'CHAT') {
             const senderId = data.from || peerId;
             const s = ensureSession(senderId);
-            if (!s.active && s.established) s.active = true; // reactivate if established
+            if (!s.active && s.established) s.active = true;
             if (!s.active) { s.active = true; s.pendingHandshake = 'none'; }
             s.messages.push({ dir: 'in', text: data.text, time: data.time || getTime(), status: 'delivered', type: 'text' });
             s.online = true;
-            saveSessionsToStorage();
-            renderSidebar();
+            saveSessionsToStorage(); renderSidebar();
             if (activeConvoId === senderId) renderMessages();
             showAppIfNeeded();
         }
+        // ─── GROUP MESSAGE HANDLING ───
+        else if (data.type === 'GROUP_JOIN') {
+            const groupId = data.groupId;
+            const memberId = data.from;
+            const displayName = data.displayName || memberId.slice(-4);
+            if (groups[groupId]) {
+                if (groups[groupId].host === myId) {
+                    if (!groups[groupId].members.includes(memberId)) {
+                        groups[groupId].members.push(memberId);
+                    }
+                    if (!groups[groupId].memberNames) groups[groupId].memberNames = {};
+                    groups[groupId].memberNames[memberId] = displayName;
+                    broadcastGroupMemberList(groupId);
+                    toast(`${displayName} joined group ${groupId}`);
+                    saveSessionsToStorage();
+                    renderGroupsList();
+                    renderGroupMembersPanel();
+                }
+            }
+        }
+        else if (data.type === 'GROUP_MEMBER_LIST') {
+            const groupId = data.groupId;
+            const membersList = data.members;
+            if (groups[groupId]) {
+                groups[groupId].members = [];
+                if (!groups[groupId].memberNames) groups[groupId].memberNames = {};
+                membersList.forEach(item => {
+                    if (typeof item === 'string') {
+                        groups[groupId].members.push(item);
+                        if (!groups[groupId].memberNames[item]) groups[groupId].memberNames[item] = item.slice(-4);
+                    } else {
+                        groups[groupId].members.push(item.id);
+                        groups[groupId].memberNames[item.id] = item.name || item.id.slice(-4);
+                    }
+                });
+                saveSessionsToStorage();
+                renderGroupsList();
+                renderGroupMembersPanel();
+            }
+        }
+        else if (data.type === 'GROUP_CHAT') {
+            const groupId = data.groupId;
+            const senderId = data.from;
+            const text = data.text;
+            const time = data.time;
+            if (groups[groupId]) {
+                if (groups[groupId].host === myId) {
+                    relayGroupMessage(groupId, senderId, text, time);
+                }
+                const alreadyExists = groups[groupId].messages.some(m => m.id === data.msgId);
+                if (!alreadyExists) {
+                    groups[groupId].messages.push({
+                        dir: (senderId === myId ? 'out' : 'in'),
+                        text: text,
+                        time: time,
+                        from: senderId,
+                        id: data.msgId || Date.now() + Math.random()
+                    });
+                    saveSessionsToStorage();
+                    renderGroupsList();
+                    if (activeGroupId === groupId) renderGroupMessages();
+                }
+            }
+        }
+    }
+
+    function broadcastGroupMemberList(groupId) {
+        const group = groups[groupId];
+        if (!group) return;
+        if (!group.memberNames) group.memberNames = {};
+        const membersInfo = group.members.map(id => ({ id, name: group.memberNames[id] || id.slice(-4) }));
+        group.members.forEach(memberId => {
+            if (memberId === myId) return;
+            const memberSess = sessions[memberId];
+            if (memberSess && memberSess.conn && memberSess.conn.open) {
+                memberSess.conn.send(JSON.stringify({
+                    type: 'GROUP_MEMBER_LIST',
+                    groupId: groupId,
+                    members: membersInfo
+                }));
+            }
+        });
+    }
+
+    function relayGroupMessage(groupId, senderId, text, time) {
+        const group = groups[groupId];
+        if (!group || group.host !== myId) return;
+        group.members.forEach(memberId => {
+            if (memberId === senderId || memberId === myId) return;
+            const memberSess = sessions[memberId];
+            if (memberSess && memberSess.conn && memberSess.conn.open) {
+                memberSess.conn.send(JSON.stringify({
+                    type: 'GROUP_CHAT',
+                    groupId: groupId,
+                    text: text,
+                    time: time,
+                    from: senderId,
+                    msgId: Date.now() + Math.random()
+                }));
+            }
+        });
+    }
+
+    function createGroupChat() {
+        if (!peerReady || !peer || peer.destroyed) { toast('Relay not ready'); return; }
+        const groupCode = 'G-' + generateShortId().substring(0,6);
+        groups[groupCode] = {
+            id: groupCode,
+            name: groupCode,
+            host: myId,
+            members: [myId],
+            memberNames: { [myId]: currentDisplayName || myId },
+            messages: []
+        };
+        saveSessionsToStorage();
+        renderGroupsList();
+        toast(`Group created! Code: ${groupCode}. Share your ID (${myId}) and this group code so others can join.`);
+        openGroupChat(groupCode);
+    }
+
+    function joinGroupChatPrompt() {
+        const groupCode = prompt('Enter group code:');
+        if (!groupCode) return;
+        const hostId = prompt('Enter host ID (the person who created the group):');
+        if (!hostId) return;
+        joinGroupChat(groupCode.trim(), hostId.trim());
+    }
+
+    async function joinGroupChat(groupCode, hostId) {
+        if (!peerReady || !peer || peer.destroyed) { toast('Relay not ready'); return; }
+        if (hostId === myId) { toast('You are the host? Create a group instead.'); return; }
+        const sess = ensureSession(hostId);
+        if (!sess.conn || !sess.conn.open) {
+            toast('Connecting to host...');
+            try {
+                await new Promise((resolve, reject) => {
+                    const conn = peer.connect(hostId, { reliable: true });
+                    conn.on('open', () => {
+                        conn.on('data', (data) => handleDataMessage(hostId, data));
+                        sess.conn = conn;
+                        sess.online = true;
+                        resolve();
+                    });
+                    conn.on('error', reject);
+                    setTimeout(() => reject(new Error('timeout')), 5000);
+                });
+            } catch(e) {
+                toast('Failed to connect to host'); return;
+            }
+        }
+        sess.conn.send(JSON.stringify({
+            type: 'GROUP_JOIN',
+            groupId: groupCode,
+            from: myId,
+            displayName: currentDisplayName || myId.slice(-4)
+        }));
+        if (!groups[groupCode]) {
+            groups[groupCode] = {
+                id: groupCode,
+                name: groupCode,
+                host: hostId,
+                members: [],
+                memberNames: {},
+                messages: []
+            };
+        }
+        groups[groupCode].host = hostId;
+        if (!groups[groupCode].members.includes(myId)) groups[groupCode].members.push(myId);
+        groups[groupCode].memberNames[myId] = currentDisplayName || myId.slice(-4);
+        saveSessionsToStorage();
+        renderGroupsList();
+        toast(`Joined group ${groupCode}`);
+        openGroupChat(groupCode);
+    }
+
+    function openGroupChat(groupId) {
+        activeGroupId = groupId;
+        activeConvoId = null;
+        document.getElementById('empty-main').style.display = 'none';
+        document.getElementById('chat-panel').style.display = 'flex';
+        document.getElementById('header-id').textContent = groups[groupId] ? groups[groupId].name : groupId;
+        document.getElementById('header-status').textContent = 'group chat';
+        document.getElementById('header-status').style.color = 'var(--text2)';
+        document.getElementById('header-avatar').innerHTML = groupId.slice(-4);
+        document.getElementById('group-members-btn').style.display = 'flex';
+        renderGroupMessages();
+        renderSidebar();
+        renderGroupsList();
+        renderGroupMembersPanel();
+    }
+
+    function toggleGroupMembers() {
+        const panel = document.getElementById('members-panel');
+        if (panel.classList.contains('show')) {
+            panel.classList.remove('show');
+        } else {
+            renderGroupMembersPanel();
+            panel.classList.add('show');
+        }
+    }
+
+    function renderGroupMembersPanel() {
+        if (!activeGroupId || !groups[activeGroupId]) return;
+        const group = groups[activeGroupId];
+        const panel = document.getElementById('members-panel');
+        if (!panel) return;
+        let html = '<div style="font-family:var(--mono);font-size:10px;color:var(--text3);margin-bottom:8px;">MEMBERS</div>';
+        group.members.forEach(memberId => {
+            const name = (group.memberNames && group.memberNames[memberId]) || memberId.slice(-4);
+            const isHost = memberId === group.host;
+            html += `<div class="member-item"><span>${escapeHtml(name)}</span>${isHost ? '<span class="host-badge">host</span>' : ''}</div>`;
+        });
+        panel.innerHTML = html;
+    }
+
+    // ══════════════════════════════════════
+    // UPDATED: Group bubbles now show real names
+    // ══════════════════════════════════════
+    function renderGroupMessages() {
+        if (!activeGroupId || !groups[activeGroupId]) return;
+        const group = groups[activeGroupId];
+        const msgsDiv = document.getElementById('messages');
+        msgsDiv.innerHTML = '<div class="day-label">group chat</div>';
+        group.messages.forEach(msg => {
+            const senderName = (msg.from === myId)
+                ? (currentDisplayName || myId)
+                : (group.memberNames && group.memberNames[msg.from]) || msg.from.slice(-4);
+            const row = document.createElement('div');
+            row.className = 'msg-row ' + msg.dir;
+            row.innerHTML = `<div style="display:flex;flex-direction:column;align-items:${msg.dir === 'out' ? 'flex-end' : 'flex-start'};max-width:78%;"><div class="msg-bubble">${escapeHtml(msg.text)}</div><div class="msg-meta">${msg.time} · ${escapeHtml(senderName)}</div></div>`;
+            msgsDiv.appendChild(row);
+        });
+        msgsDiv.scrollTop = msgsDiv.scrollHeight;
+    }
+
+    function renderGroupsList() {
+        const container = document.getElementById('groups-list');
+        if (!container) return;
+        container.innerHTML = '';
+        Object.values(groups).forEach(group => {
+            const div = document.createElement('div');
+            div.className = 'group-item' + (activeGroupId === group.id ? ' active' : '');
+            div.innerHTML = `<div class="group-avatar">${group.id.slice(-4)}</div><div class="group-info"><div class="group-name">${escapeHtml(group.name)}</div><div class="group-preview">${group.members.length} members</div></div>`;
+            div.onclick = () => openGroupChat(group.id);
+            container.appendChild(div);
+        });
     }
 
     function ensureSession(peerId) {
@@ -1266,8 +1441,7 @@
         }
     }
 
-    // ── RE-ESTABLISH connection for previous contact (auto-reconnect) ──
-    function reconnectToPeer(peerId) {
+    async function reconnectToPeer(peerId) {
         return new Promise((resolve, reject) => {
             if (reconnectingFlags[peerId]) { toast('Already reconnecting...'); reject(); return; }
             const sess = sessions[peerId];
@@ -1287,7 +1461,6 @@
                 conn.send(JSON.stringify({ type: 'HANDSHAKE_RECONNECT', from: myId }));
                 sess.pendingHandshake = 'none';
                 sess.online = true;
-                // Wait for ACCEPT or mark active after response (handled in handleDataMessage)
                 saveSessionsToStorage();
                 renderSidebar();
                 delete reconnectingFlags[peerId];
@@ -1302,7 +1475,6 @@
         });
     }
 
-    // ── Send connection request (unchanged) ──
     function sendConnectionRequest() {
         if (!peerReady || !peer || peer.destroyed) { toast('Relay not ready — please wait'); return; }
         const input = document.getElementById('connect-input');
@@ -1373,9 +1545,9 @@
     function restorePreviousConversations() {
         showAppIfNeeded();
         renderSidebar();
+        renderGroupsList();
     }
 
-    // ── Render sidebar (with reconnect trigger on conversation click) ──
     function renderSidebar() {
         const container = document.getElementById('convos-list');
         if (!container) return;
@@ -1409,7 +1581,6 @@
         }
     }
 
-    // ── Open conversation: trigger auto-reconnect if needed (persistent resume) ──
     async function openConvo(peerId) {
         const sess = sessions[peerId];
         if (!sess) return;
@@ -1417,15 +1588,19 @@
             try { await reconnectToPeer(peerId); } catch(e) { toast(`Could not reconnect to ${peerId} — they might be offline`); }
         }
         activeConvoId = peerId;
+        activeGroupId = null;
         document.getElementById('empty-main').style.display = 'none';
         document.getElementById('chat-panel').style.display = 'flex';
         document.getElementById('header-id').textContent = peerId;
         updateHeaderStatus();
         document.getElementById('header-avatar').innerHTML = escapeHtml(peerId.slice(-4)) + '<div style="position:absolute;bottom:-2px;right:-2px;width:8px;height:8px;border-radius:50%;border:1.5px solid var(--bg2);background:' + (sess.online ? 'var(--green)' : 'var(--text3)') + '"></div>';
+        document.getElementById('group-members-btn').style.display = 'none';
+        document.getElementById('members-panel').classList.remove('show');
         renderMessages();
         if (sess.messages) sess.messages.forEach(m => { if (m.dir === 'in') m.status = 'seen'; });
         saveSessionsToStorage();
         renderSidebar();
+        renderGroupsList();
     }
 
     function updateHeaderStatus() {
@@ -1453,18 +1628,48 @@
         msgsDiv.scrollTop = msgsDiv.scrollHeight;
     }
 
-    // ── Send message (if session inactive but established, trigger reconnect first) ──
     async function sendMessage() {
         const inp = document.getElementById('msg-input');
         const text = inp.value.trim();
-        if (!text || !activeConvoId) return;
+        if (!text) return;
+        if (activeGroupId) {
+            const group = groups[activeGroupId];
+            if (!group) return;
+            if (group.host === myId) {
+                const msgObj = { dir: 'out', text, time: getTime(), from: myId, id: Date.now() + Math.random() };
+                group.messages.push(msgObj);
+                saveSessionsToStorage();
+                renderGroupMessages();
+                group.members.forEach(memberId => {
+                    if (memberId === myId) return;
+                    const sess = sessions[memberId];
+                    if (sess && sess.conn && sess.conn.open) {
+                        sess.conn.send(JSON.stringify({ type: 'GROUP_CHAT', groupId: activeGroupId, text, time: msgObj.time, from: myId, msgId: msgObj.id }));
+                    }
+                });
+            } else {
+                const hostSess = sessions[group.host];
+                if (!hostSess || !hostSess.conn || !hostSess.conn.open) {
+                    toast('Host offline, cannot send'); return;
+                }
+                const msgObj = { dir: 'out', text, time: getTime(), from: myId, id: Date.now() + Math.random() };
+                group.messages.push(msgObj);
+                saveSessionsToStorage();
+                renderGroupMessages();
+                hostSess.conn.send(JSON.stringify({ type: 'GROUP_CHAT', groupId: activeGroupId, text, time: msgObj.time, from: myId, msgId: msgObj.id }));
+            }
+            inp.value = '';
+            autoResize(inp);
+            return;
+        }
+        if (!activeConvoId) return;
         const sess = sessions[activeConvoId];
         if (!sess) return;
         if (!sess.active && sess.established) {
             toast('Reconnecting before sending...');
-            try { await reconnectToPeer(activeConvoId); } catch(e) { toast('Cannot send: peer offline. Try again later.'); return; }
+            try { await reconnectToPeer(activeConvoId); } catch(e) { toast('Cannot send: peer offline.'); return; }
         }
-        if (!sess.active) { toast('Session not active — please wait for reconnection'); return; }
+        if (!sess.active) { toast('Session not active'); return; }
         if (!sess.conn || !sess.conn.open) { toast('Connection lost — reconnecting'); reconnectToPeer(activeConvoId).catch(()=>toast('Offline')); return; }
         const now = getTime();
         const messageObj = { dir: 'out', text: text, time: now, status: 'sent', type: 'text' };
@@ -1477,17 +1682,53 @@
         try {
             sess.conn.send(JSON.stringify({ type: 'CHAT', text: text, time: now, from: myId }));
             setTimeout(() => { const last = sess.messages[sess.messages.length-1]; if (last && last.dir === 'out' && last.status === 'sent') { last.status = 'delivered'; saveSessionsToStorage(); renderMessages(); } }, 150);
-        } catch(e) { toast('Failed to send — connection may be broken'); }
+        } catch(e) { toast('Failed to send — connection broken'); }
     }
 
-    function goBack() { document.getElementById('chat-panel').style.display = 'none'; document.getElementById('empty-main').style.display = 'flex'; activeConvoId = null; renderSidebar(); }
-    function copyMyId() { if (!myId) { toast('ID not ready'); return; } navigator.clipboard.writeText(myId).then(()=>toast('Copied: '+myId)).catch(()=>{ const tmp=document.createElement('input'); tmp.value=myId; document.body.appendChild(tmp); tmp.select(); document.execCommand('copy'); document.body.removeChild(tmp); toast('Copied: '+myId); }); }
+    function goBack() {
+        document.getElementById('chat-panel').style.display = 'none';
+        document.getElementById('empty-main').style.display = 'flex';
+        activeConvoId = null;
+        activeGroupId = null;
+        document.getElementById('group-members-btn').style.display = 'none';
+        document.getElementById('members-panel').classList.remove('show');
+        renderSidebar();
+        renderGroupsList();
+    }
+
+    function copyMyId() {
+        if (!myId) { toast('ID not ready'); return; }
+        navigator.clipboard.writeText(myId).then(()=>toast('Copied: '+myId)).catch(()=>{ const tmp=document.createElement('input'); tmp.value=myId; document.body.appendChild(tmp); tmp.select(); document.execCommand('copy'); document.body.removeChild(tmp); toast('Copied: '+myId); });
+    }
+
     function autoResize(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 100) + 'px'; }
     function getTime() { const d = new Date(); return d.getHours().toString().padStart(2,'0')+':'+d.getMinutes().toString().padStart(2,'0'); }
     function toast(msg) { const t = document.getElementById('toast'); if (!t) return; t.textContent = msg; t.classList.add('show'); clearTimeout(t._tid); t._tid = setTimeout(()=>t.classList.remove('show'), 2200); }
     function escapeHtml(s) { return String(s).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m])); }
-    function healthCheck() { if (!peer || peer.destroyed || !peerReady) return; Object.keys(sessions).forEach(pid => { const s = sessions[pid]; if (s && s.conn) s.online = s.conn.open; }); saveSessionsToStorage(); renderSidebar(); if (activeConvoId) updateHeaderStatus(); const dot = document.getElementById('relay-dot'); const statusText = document.getElementById('relay-status-text'); if (dot && statusText && peerReady && peer && !peer.destroyed && !peer.disconnected) { dot.style.background = 'var(--green)'; statusText.textContent = 'relay active · human-to-human only'; } }
-    function bootstrap() { document.getElementById('app').style.display = 'none'; document.getElementById('entry').style.display = 'flex'; loadSessionsFromStorage(); loadDisplayName(); initPeer(); setInterval(healthCheck, 8000); }
+
+    function healthCheck() {
+        if (!peer || peer.destroyed || !peerReady) return;
+        Object.keys(sessions).forEach(pid => { const s = sessions[pid]; if (s && s.conn) s.online = s.conn.open; });
+        saveSessionsToStorage();
+        renderSidebar();
+        renderGroupsList();
+        if (activeConvoId) updateHeaderStatus();
+        const dot = document.getElementById('relay-dot');
+        const statusText = document.getElementById('relay-status-text');
+        if (dot && statusText && peerReady && peer && !peer.destroyed && !peer.disconnected) {
+            dot.style.background = 'var(--green)';
+            statusText.textContent = 'relay active · human-to-human only';
+        }
+    }
+
+    function bootstrap() {
+        document.getElementById('app').style.display = 'none';
+        document.getElementById('entry').style.display = 'flex';
+        loadSessionsFromStorage();
+        loadDisplayName();
+        initPeer();
+        setInterval(healthCheck, 8000);
+    }
     bootstrap();
 </script>
 </body>
